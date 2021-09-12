@@ -1,0 +1,25 @@
+/* MIXIN */
+
+@mixin display-flex($display, $align-items, $justify-content) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin media($size) {
+  @if ($size == "large") {
+    @media screen and (max-width: 978px) {
+      @content;
+    }
+  }
+  @if $size== "medium" {
+    @media screen and (max-width: 760px) {
+      @content;
+    }
+  }
+  @if $size== "small" {
+    @media screen and (max-width: 570px) {
+      @content;
+    }
+  }
+}
