@@ -5,110 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- FONT AWESOME IMPORT  -->
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <!-- JS IMPORTS -->
+    <!-- CREATING LAYOUT -->
+    <script src="./js/createForm.js" defer></script>
+    <!-- MODAL -->
     <script src="./js/formModal.js " defer></script>
     <title>JS World! | Form</title>
   </head>
   <body>
-    <!--
-        NAVBAR
-            CONTAINER
-                DIV NAV (FLEX)
-                    LOGO
-                    SEARCH BAR
-                    PROFILE
-
-        MAIN
-            CONTAINER(FLEX)
-                -SIDEBAR (FLEX BASIS 30%)
-                -CONTENT(FLEX)(FLEX BASIS 70%)
-                    -FORM
-                    -CARD-LIST(GRID)
-     -->
-    <header>
-      <div class="container">
-        <div class="nav">
-          <div class="nav-logo">
-            <a href="/"><img alt="logo" src="./img/logo.png" /> </a>
-          </div>
-
-          <!-- <div class="nav-search">
-            <input type="text" placeholder="Search..." /><i
-              class="fas fa-search fa-lg"
-            ></i>
-          </div> -->
-
-          <div class="nav-profile">
-            <a href="https://github.com/Ogzhnsfgl" target="_blank">
-              <i class="fas fa-user fa-2x"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="main-container">
-        <div class="sidebar">
-          <a href="/form.html" class="active">Form</a>
-          <a href="/cardList.html">Card List</a>
-        </div>
-        <div class="content">
-          <div class="content-title">
-            <h2>FORM AREA</h2>
-          </div>
-          <div id="formModal" class="formModal">
-            <!-- Modal content -->
-            <div class="formModal-content">
-              <span class="close">&times;</span>
-            </div>
-          </div>
-          <form class="form">
-            <input type="text" name="Company" placeholder="Company" />
-            <input type="text" name="First Name" placeholder="First Name" />
-            <input type="text" name="Last Name" placeholder="Last Name" />
-            <input type="email" name="Email" placeholder="Email" />
-            <input type="text" name="Title" placeholder="Title" />
-            <input type="text" name="Phone" placeholder="Phone" />
-
-            <div class="radio-menu">
-              <div class="radio-title">Job Functions:</div>
-              <div class="radio-menu-items">
-                <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme1" />
-                  <span> Campaign Management </span>
-                </div>
-                <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme2" />
-                  <span> Campaign Management </span>
-                </div>
-                <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme3" />
-                  <span> Campaign Management </span>
-                </div>
-                <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme4" />
-                  <span> Campaign Management </span>
-                </div>
-                <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme5" />
-                  <span> Campaign Management </span>
-                </div>
-              </div>
-            </div>
-            <textarea
-              type="text"
-              name="Your message:"
-              placeholder="Your message...."
-            ></textarea>
-            <button class="form-button" type="button">Send</button>
-          </form>
-        </div>
-      </div>
-    </main>
+    <div class="app"></div>
   </body>
 </html>

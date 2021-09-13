@@ -19,6 +19,7 @@ btn.onclick = function (e) {
   const formValue = document.createElement("div");
   formValue.className = "formModal-content";
   Object.keys(formEl).forEach((element) => {
+    debugger;
     if (!parseInt(element) && element != 0 && formEl[element].value !== "") {
       let p = document.createElement("p");
       p.innerHTML = `<strong>${element}</strong> : ${formEl[element].value}`;
