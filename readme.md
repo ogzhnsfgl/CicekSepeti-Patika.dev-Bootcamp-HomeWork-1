@@ -1,8 +1,10 @@
 # Introduction
 
-JS Homework 1 **Çiceksepeti & patika.dev Bootcamp**;
+![banner info](./img/banner.gif)
 
-**Live demo avaliable [here](https://cicek-sepeti-patika-dev-home-work-1.vercel.app/cardList.html)**
+## **Çiceksepeti & patika.dev Bootcamp** Homework 1
+
+**Live demo avaliable [here.](https://cicek-sepeti-patika-dev-home-work-1.vercel.app/cardList.html)**
 
 - Created with pure CSS(SCSS) & JS.
 - JSONPlaceHolder was used to fetch some mock data.
