@@ -5,6 +5,7 @@
 @import "variables";
 @import "components";
 
+/* GENERAL SETTINGS */
 * {
   margin: 0px;
   padding: 0px;
@@ -41,7 +42,7 @@ h2 {
   width: 100%;
 }
 
-/* Header  */
+/* HEADER  */
 
 header {
   border-bottom: 2px solid $blue-color;
@@ -90,7 +91,7 @@ header {
       &:active,
       &:focus {
         outline: none;
-        border-bottom: 1px solid $blue-color;
+        border-bottom: 1.3px solid $black-color;
       }
     }
 
@@ -106,6 +107,7 @@ header {
   }
 }
 
+/* MAIN */
 .main-container {
   margin-top: 1rem;
   max-width: 100%;
@@ -175,7 +177,7 @@ header {
   }
 }
 
-/* Form */
+/* FORM */
 
 .form {
   background-color: rgba($color: $gray-color, $alpha: 0.4);
@@ -267,28 +269,26 @@ header {
   padding: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 1rem;
+  overflow: hidden;
 }
 
 /* Modal */
 
 /* The Modal (background) */
 .formModal {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
+  display: block;
+  position: fixed;
+  z-index: 10;
   left: -50%;
-  // top: -0%;
-  width: 50%; /* Full width */
-  // overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 50%;
   transition: $general-transition;
   transform: translate(-50%);
 
+  /* WHEN FORM IS ACTIVE */
   &-active {
     transition: $general-transition;
     position: fixed;
-    z-index: 10; /* Sit on top */
+    z-index: 10;
     height: 100vh;
     left: 50%;
     top: 0%;
@@ -297,34 +297,34 @@ header {
     transform: translate(-50%);
     margin-top: 50px;
     border-radius: 12px;
+
+    /* CLOSE BUTTON */
     .close {
       position: absolute;
-      top: 5px;
+      top: 0px;
       right: 10px;
       color: #aaa;
       float: right;
-      font-size: 28px;
+      font-size: 2.5rem;
       font-weight: bold;
       color: red;
     }
 
     .close:hover,
     .close:focus {
-      color: black;
+      color: $blue-color;
       text-decoration: none;
       cursor: pointer;
     }
   }
-  // transform: translateY(-10%);
+  /* MODAL CONTENT */
   &-content {
     background-color: rgba($color: darken($gray-color, 30%), $alpha: 0.9);
-    // margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 2px solid rgba($color: $green-color, $alpha: 0.7);
-    border-radius: 12px;
+    border-radius: 1.2rem;
     width: 100%;
     height: 100%;
-    color: black;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -337,27 +337,11 @@ header {
       color: $black-color;
       padding: 1rem;
       border-bottom: 1px solid rgba($color: $green-color, $alpha: 0.7);
+      @include media(small) {
+        line-height: 0.75rem;
+        font-size: 0.75rem;
+        padding: 0.5rem;
+      }
     }
   }
-  .close {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    color: red;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  /* Modal Content/Box */
 }
-
-/* The Close Button */
