@@ -205,7 +205,13 @@ h2 {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0.5rem;
-  width: 100%;
+  width: 90%;
+}
+
+@media screen and (max-width: 570px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* HEADER  */
