@@ -29,7 +29,7 @@ const listItem = (data) => {
 
     cardItem.className = "card";
     cardItem.innerHTML = `     <div class="card-thumbnail">
-                                    <img src="https://picsum.photos/id/${rnd}/250/200" alt="lorem pic" />
+                                    <img src="https://picsum.photos/id/${rnd}/450/300" alt="lorem pic" />
                                   </div>
                                   <div class="card-content">
                                     <p class="card-content-title">${item.title}</p>
