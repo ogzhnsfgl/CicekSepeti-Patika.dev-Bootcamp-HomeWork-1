@@ -10,8 +10,8 @@
 .card {
   width: 100%;
   height: 100%;
-  max-height: 400px;
-  padding: 0.4rem;
+  max-height: 500px;
+  padding: 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,9 +23,10 @@
   transition: all 0.5s;
   background: #2f2d2d;
   border-radius: 12px;
-  border-top: 2px solid #932432;
+  border-top: 1px solid #932432;
   -webkit-box-shadow: 3.4px 6.9px 6.9px black;
           box-shadow: 3.4px 6.9px 6.9px black;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -43,6 +44,7 @@
 
 .card-thumbnail {
   height: 60%;
+  padding: 0rem;
   border-bottom: 3px solid #932432;
 }
 
@@ -51,8 +53,6 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 0.9rem;
-  border-radius: 12px;
 }
 
 .card-content {
@@ -70,6 +70,7 @@
           justify-content: space-evenly;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .card-content-title {
@@ -85,6 +86,26 @@
   text-align: justify;
   text-overflow: ellipsis;
   white-space: normal;
+}
+
+.card-button {
+  background-color: #a52c3c;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card-button a {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+.card-button:hover {
+  background-color: #2f2d2d;
 }
 
 /* Loader spinner appear while data are fetching */
@@ -203,6 +224,10 @@
 * > ::placeholder {
   font-size: 1rem;
   color: #f3f3f3ab;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {

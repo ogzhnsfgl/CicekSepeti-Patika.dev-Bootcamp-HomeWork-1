@@ -4,7 +4,6 @@ const search = document
   .querySelector(".search")
   .addEventListener("input", onChange);
 const spinner = document.querySelector(".loader");
-console.log(spinner);
 
 /* FETCHING DATA */
 //Reduced data store only 10 items.
@@ -27,6 +26,7 @@ const listItem = (data) => {
   data.forEach((item, index) => {
     const cardItem = document.createElement("div");
     let rnd = Math.trunc(Math.random() * 100 + 1);
+
     cardItem.className = "card";
     cardItem.innerHTML = `     <div class="card-thumbnail">
                                     <img src="https://picsum.photos/id/${rnd}/250/200" alt="lorem pic" />
@@ -36,7 +36,9 @@ const listItem = (data) => {
                                     <p class="card-content-body">
                                       ${item.body}
                                     </p>
-                                </div>`;
+                                </div>
+                                <div class="card-button">
+                                <a href="https://jsonplaceholder.typicode.com/posts/${item.id}" target="_blank" rel="noopener noreferrer">Details</a></div>`;
     cardList.appendChild(cardItem);
   });
 };
