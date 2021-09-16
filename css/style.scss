@@ -42,9 +42,6 @@ h1 {
   letter-spacing: 3px;
   transition: all 0.5s;
   text-shadow: 8px 1px 8px rgb(61, 58, 58);
-  &:hover {
-    font-size: 2.7rem;
-  }
 }
 h2 {
   color: $blue-color;

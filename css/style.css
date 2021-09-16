@@ -234,10 +234,6 @@ h1 {
   text-shadow: 8px 1px 8px #3d3a3a;
 }
 
-h1:hover {
-  font-size: 2.7rem;
-}
-
 h2 {
   color: #a52c3c;
   font-size: 1.6rem;
