@@ -21,8 +21,8 @@ appContainer.innerHTML = ` <header>
           <a href="/cardList.html">Card List</a>
         </div>
         <div class="content">
-        <h1>ÇicekSepeti & patika.dev React Bootcamp</h1>
-        <h1>HOMEWORK 1</h1>
+        <h1 class="typing-header">ÇicekSepeti & patika.dev React Bootcamp - Homework 1</h1>
+
 
         </div>
       </div>

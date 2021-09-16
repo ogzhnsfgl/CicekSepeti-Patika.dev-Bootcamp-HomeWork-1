@@ -126,6 +126,44 @@
   display: none;
 }
 
+.typing-header {
+  width: 56ch;
+  -webkit-animation: typing 3s steps(56), blink 0.5s step-end infinite alternate;
+          animation: typing 3s steps(56), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #a52c3c;
+  letter-spacing: 1px;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 /* GENERAL SETTINGS */
 * {
   margin: 0px;
@@ -186,19 +224,6 @@ h1 {
 
 h1:hover {
   font-size: 2.7rem;
-}
-
-h2 {
-  color: #a52c3c;
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-@media screen and (max-width: 570px) {
-  h2 {
-    font-size: 1.1rem;
-  }
 }
 
 .container {
