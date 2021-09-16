@@ -23,6 +23,8 @@
   background: #2f2d2d;
   border-radius: 12px;
   border-top: 2px solid #932432;
+  -webkit-box-shadow: 3.4px 6.9px 6.9px black;
+          box-shadow: 3.4px 6.9px 6.9px black;
 }
 
 .card:hover {
@@ -30,7 +32,6 @@
   background: linear-gradient(#bc2e40, #d34a5b);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  border: 0.5px solid rgba(182, 172, 172, 0.8);
 }
 
 .card:hover .card-thumbnail {

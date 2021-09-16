@@ -12,6 +12,7 @@
   background: darken($bg-color, 30%);
   border-radius: 12px;
   border-top: 2px solid $green-color;
+  box-shadow: 3.4px 6.9px 6.9px hsl(0deg, 0%, 0% / 0.39);
 
   &:hover {
     background: linear-gradient(
@@ -19,7 +20,6 @@
       lighten($green-color, 20%)
     );
     transition: $general-transition;
-    border: 0.5px solid rgba(182, 172, 172, 0.8);
 
     .card-thumbnail {
       border-bottom: 3px solid rgb(182, 172, 172) !important;
