@@ -30,8 +30,11 @@ appContainer.innerHTML = `  <header>
         <div class="content">
           <div class="content-title">
             <h2>CONTENT AREA</h2>
+            <p class="search-result"></p>
           </div>
-          <div class="card-list"></div>
+          <div class="loader"></div>
+          <div class="card-list">
+          </div>
         </div>
       </div>
     </main>`;

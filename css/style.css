@@ -85,6 +85,46 @@
   white-space: normal;
 }
 
+/* Loader spinner appear while data are fetching */
+.loader {
+  border: 9px solid #f3f3f3;
+  border-top: 9px solid #932432;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+  display: block;
+  margin-top: 5rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* For hide to spinner when fetching done */
+.hide {
+  display: none;
+}
+
 /* GENERAL SETTINGS */
 * {
   margin: 0px;
@@ -307,10 +347,35 @@ header {
   width: 100%;
   text-align: center;
   padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .content-title {
   padding: 1rem;
+  width: 100%;
+}
+
+.content-title .search-result {
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-bottom: -1rem;
+  font-style: italic;
+  justify-self: flex-start;
+  opacity: 0.7;
 }
 
 /* SIDEBAR */
@@ -520,6 +585,7 @@ header {
   background-color: #7e7777;
   margin: 0 auto;
   max-width: 100%;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   padding: 1rem;

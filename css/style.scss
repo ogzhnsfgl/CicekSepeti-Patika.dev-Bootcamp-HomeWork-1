@@ -159,9 +159,23 @@ header {
   width: 100%;
   text-align: center;
   padding: 1.5rem;
+  @include display-flex(flex, center, space-between);
+  flex-direction: column;
 
   &-title {
     padding: 1rem;
+    width: 100%;
+    // Search result info text
+    .search-result {
+      width: 100%;
+      font-size: 0.9rem;
+      text-align: left;
+      margin-top: 0.5rem;
+      margin-bottom: -1rem;
+      font-style: italic;
+      justify-self: flex-start;
+      opacity: 0.7;
+    }
   }
 }
 
@@ -315,6 +329,7 @@ header {
   margin: 0 auto;
   // width: 100%;
   max-width: 100%;
+  width: 100%;
   display: grid;
   padding: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -404,7 +419,6 @@ header {
 
     &__title {
       font-size: 1.5rem;
-      // padding: 0.3rem;
       border-bottom: 3px solid rgb(189, 178, 178);
       background: rgba($color: $green-color, $alpha: 0.7);
       line-height: 2;
@@ -413,7 +427,6 @@ header {
       @include media(small) {
         font-size: 1rem;
         line-height: 2;
-        // padding: 0.5rem;
       }
     }
   }

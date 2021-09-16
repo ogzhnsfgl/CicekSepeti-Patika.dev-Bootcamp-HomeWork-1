@@ -1,7 +1,10 @@
 const cardList = document.querySelector(".card-list");
+const searchResult = document.querySelector(".search-result");
 const search = document
   .querySelector(".search")
   .addEventListener("input", onChange);
+const spinner = document.querySelector(".loader");
+console.log(spinner);
 
 /* FETCHING DATA */
 //Reduced data store only 10 items.
@@ -19,6 +22,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
 /* LISTING ITEMS */
 const listItem = (data) => {
+  spinner.classList.add("hide");
   //Every items in data use to create card.
   data.forEach((item, index) => {
     const cardItem = document.createElement("div");
@@ -47,6 +51,15 @@ function onChange(e) {
   );
   //Clear card list
   cardList.innerHTML = "";
+  searchResult.innerHTML = "";
   //List filtered items
-  listItem(filteredData.slice(0, 10));
+  if (filteredData.length > 0) {
+    searchResult.innerHTML = `Showing results for: "${input}"`;
+    listItem(filteredData.slice(0, 10));
+  } else {
+    searchResult.innerHTML = `No result for: "${input}`;
+  }
+  if (input.length === 0) {
+    searchResult.innerHTML = "";
+  }
 }
