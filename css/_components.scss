@@ -89,7 +89,7 @@
 }
 
 .typing-header {
-  width: 750px;
+  width: 850px;
   animation: typing 4s steps(56), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
@@ -99,7 +99,7 @@
   font-weight: 600;
   color: $blue-color;
   letter-spacing: 1px;
-  @include media(large) {
+  @include media(xlarge) {
     width: 100%;
     animation: none;
     white-space: normal;
