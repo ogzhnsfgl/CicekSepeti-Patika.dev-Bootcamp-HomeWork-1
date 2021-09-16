@@ -449,6 +449,7 @@ header {
   margin-top: 2rem;
   -ms-flex-item-align: baseline;
       align-self: baseline;
+  text-align: center;
 }
 
 @media screen and (max-width: 978px) {
@@ -487,10 +488,13 @@ header {
     -webkit-box-align: unset;
         -ms-flex-align: unset;
             align-items: unset;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    width: 30%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+  }
+  .sidebar a:not(:last-child) {
+    border-right: 2px solid #a52c3c;
   }
 }
 

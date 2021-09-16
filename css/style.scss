@@ -198,11 +198,16 @@ header {
   margin-top: 2rem;
 
   align-self: baseline;
+  text-align: center;
 
   a {
     @include media(large) {
-      @include display-flex(flex, unset, unset);
-      width: 30%;
+      @include display-flex(flex, unset, center);
+      width: 50%;
+
+      &:not(:last-child) {
+        border-right: 2px solid $blue-color;
+      }
     }
     display: block;
     text-decoration: none;
