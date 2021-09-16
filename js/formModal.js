@@ -1,29 +1,36 @@
 // Get all required elements
 const modal = document.getElementById("formModal");
-const modalcontent = document.getElementById("formModal");
 const btn = document.querySelector(".form-button");
 const formEl = document.querySelector("form").elements;
+const radioInputs = document.querySelectorAll(".radio-input");
+const form = document.querySelector("form");
+const formData = new FormData(form);
 
 // Form button click event
-document.querySelector(".form-button").addEventListener("click", onclick);
+// document.querySelector(".form-button").addEventListener("click", onclick);
+btn.addEventListener("click", onclick);
 document.getElementsByClassName("close")[0].addEventListener("click", close);
 
 //Create new element for modal content
 const modalContent = document.createElement("div");
 modalContent.className = "formModal-content";
 
-// Button lick function
+// Button click function
 btn.onclick = function (e) {
   e.preventDefault();
   e.stopPropagation();
   //Clear old data from Modal Content
-  modalcontent.innerHTML = "";
+  modal.innerHTML = "";
   modalContent.innerHTML = "";
   // Get form to reach form input values
   const form = document.querySelector("form");
-  const data = new FormData(form);
+  const formData = new FormData(form);
+  const modalTitle = document.createElement("div");
+  modalTitle.className = "formModal-content__title";
+  modalTitle.innerHTML = "FORM SUMMARY";
+  modal.appendChild(modalTitle);
   // Iterate all key of inputs
-  for (var key of data.keys()) {
+  for (var key of formData.keys()) {
     //Send key createItem function
     createItem(key);
   }
@@ -37,11 +44,9 @@ btn.onclick = function (e) {
 
 // Close button click function
 function close() {
+  const form = document.querySelector("form");
+  form.reset();
   chechActive();
-  // Clear form input fields
-  Object.keys(formEl).forEach((item) => {
-    formEl[item].value = "";
-  });
 }
 
 function createItem(key) {
@@ -50,9 +55,11 @@ function createItem(key) {
     return;
   }
   // create and fill p element
-  let p = document.createElement("p");
-  p.innerHTML = `<strong>${key}</strong> : ${formEl[key].value}`;
-  modalContent.appendChild(p);
+  let pDiv = document.createElement("div");
+  pDiv.className = "form-text";
+
+  pDiv.innerHTML = `<p><strong>${key}</strong> : ${formEl[key].value}</p>`;
+  modalContent.appendChild(pDiv);
 
   //Append p element to modal content
   modal.appendChild(modalContent);

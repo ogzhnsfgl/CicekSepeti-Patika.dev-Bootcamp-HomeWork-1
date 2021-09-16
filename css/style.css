@@ -1,5 +1,6 @@
 /* Google Font Import */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 /* Local Imports */
 /* MIXIN */
 /* Variables */
@@ -9,7 +10,7 @@
   width: 100%;
   height: 100%;
   max-height: 400px;
-  padding: 0.3rem;
+  padding: 0.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,24 +20,28 @@
           flex-direction: column;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6a1a24), to(#932432));
-  background: linear-gradient(#6a1a24, #932432);
-  -webkit-box-shadow: 2px 4px #5a4b4b;
-          box-shadow: 2px 4px #5a4b4b;
+  background: #2f2d2d;
   border-radius: 12px;
+  border-top: 2px solid #932432;
 }
 
 .card:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#bc2e40), to(#d34a5b));
   background: linear-gradient(#bc2e40, #d34a5b);
-  -webkit-box-shadow: 2px 4px #4c3f3f;
-          box-shadow: 2px 4px #4c3f3f;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 0.5px solid rgba(182, 172, 172, 0.8);
+}
+
+.card:hover .card-thumbnail {
+  border-bottom: 3px solid #b6acac !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .card-thumbnail {
   height: 60%;
+  border-bottom: 3px solid #932432;
 }
 
 .card-thumbnail img {
@@ -44,7 +49,7 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 0.6rem;
+  padding: 0.9rem;
   border-radius: 12px;
 }
 
@@ -113,6 +118,33 @@ body {
   background-color: #7e7777;
   font-size: 10px;
   font-family: "Raleway", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(147, 36, 50, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a52c3c;
+}
+
+h1 {
+  color: #a52c3c;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 3px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-shadow: 8px 1px 8px #3d3a3a;
+}
+
+h1:hover {
+  font-size: 2.7rem;
 }
 
 h2 {
@@ -195,7 +227,7 @@ header {
 .nav-search input {
   width: 100%;
   height: 3rem;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 2.5rem;
   border-radius: 8px;
   border: none;
   border-bottom: 1px solid #932432;
@@ -226,11 +258,25 @@ header {
 .nav-search i {
   position: absolute;
   top: 1.2rem;
-  right: 1rem;
+  left: 1rem;
   width: 25px;
   height: 15px;
   height: 100%;
   color: #a52c3c;
+}
+
+.nav-profile img {
+  width: 55px;
+  border-radius: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 3px solid rgba(147, 36, 50, 0.6);
+  opacity: 0.8;
+}
+
+.nav-profile:hover img {
+  border: 3px solid #932432;
+  opacity: 1;
 }
 
 /* MAIN */
@@ -421,10 +467,12 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 100%;
 }
 
 .form .radio-menu .radio-menu-items {
   margin-left: 1rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,6 +484,19 @@ header {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   padding: 0.3rem;
+}
+
+.form .radio-menu .radio-menu-items .radio-menu-item {
+  width: 100%;
+  text-align: left;
+}
+
+.form .radio-menu .radio-menu-items .radio-menu-item input {
+  accent-color: #932432;
+}
+
+.form .radio-menu .radio-menu-items .radio-menu-item p {
+  width: 100%;
 }
 
 .form .radio-options {
@@ -462,9 +523,9 @@ header {
   display: -ms-grid;
   display: grid;
   padding: 1rem;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 1rem;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0.8rem;
   overflow: hidden;
 }
 
@@ -480,6 +541,7 @@ header {
   transition: all 0.5s;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+  overflow: hidden;
   /* WHEN FORM IS ACTIVE */
   /* MODAL CONTENT */
 }
@@ -497,19 +559,27 @@ header {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   margin-top: 50px;
-  border-radius: 12px;
+  border: 2px solid rgba(147, 36, 50, 0.7);
+  overflow: hidden;
   /* CLOSE BUTTON */
 }
 
 .formModal-active .close {
   position: absolute;
-  top: 0px;
-  right: 10px;
+  top: -5px;
+  right: 14px;
   color: #aaa;
   float: right;
   font-size: 2.5rem;
   font-weight: bold;
-  color: red;
+  color: #f3f3f3ab;
+}
+
+@media screen and (max-width: 570px) {
+  .formModal-active .close {
+    top: -12px;
+    right: 5px;
+  }
 }
 
 .formModal-active .close:hover,
@@ -521,9 +591,6 @@ header {
 
 .formModal-content {
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 20px;
-  border: 2px solid rgba(147, 36, 50, 0.7);
-  border-radius: 1.2rem;
   width: 100%;
   height: 100%;
   position: relative;
@@ -534,6 +601,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: auto;
 }
 
 .formModal-content p {
@@ -544,6 +612,7 @@ header {
   color: #f3f3f3ab;
   padding: 1rem;
   border-bottom: 1px solid rgba(147, 36, 50, 0.7);
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 570px) {
@@ -551,6 +620,22 @@ header {
     line-height: 0.75rem;
     font-size: 0.75rem;
     padding: 0.5rem;
+  }
+}
+
+.formModal-content__title {
+  font-size: 1.5rem;
+  border-bottom: 3px solid #bdb2b2;
+  background: rgba(147, 36, 50, 0.7);
+  line-height: 2;
+  width: 100%;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 570px) {
+  .formModal-content__title {
+    font-size: 1rem;
+    line-height: 2;
   }
 }
 /*# sourceMappingURL=style.css.map */

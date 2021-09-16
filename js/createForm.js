@@ -1,5 +1,4 @@
 const appContainer = document.querySelector(".app");
-
 appContainer.innerHTML = `  <header>
       <div class="container">
         <div class="nav">
@@ -8,10 +7,9 @@ appContainer.innerHTML = `  <header>
           </div>
 
 
-          <div class="nav-profile">
+         <div class="nav-profile">
             <a href="https://github.com/Ogzhnsfgl" target="_blank">
-              <i class="fas fa-user fa-2x"></i
-            ></a>
+             <img src="https://avatars.githubusercontent.com/u/85337758?v=4" alt="" /></a>
           </div>
         </div>
       </div>
@@ -28,6 +26,7 @@ appContainer.innerHTML = `  <header>
           </div>
           <div id="formModal" class="formModal">
             <!-- Modal content -->
+
             <div class="formModal-content">
               <span class="close">&times;</span>
             </div>
@@ -44,24 +43,25 @@ appContainer.innerHTML = `  <header>
               <div class="radio-title">Job Functions:</div>
               <div class="radio-menu-items">
                 <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme1" />
+                  <input type="radio" name="Job Function" value="Campaign Management" class="radio-input" />
                   <span> Campaign Management </span>
                 </div>
                 <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme2" />
-                  <span> Campaign Management </span>
+                  <input type="radio" name="Job Function" value="CRM Administration" class="radio-input"
+                   />
+                  <span> CRM Administration </span>
                 </div>
                 <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme3" />
-                  <span> Campaign Management </span>
+                  <input type="radio" name="Job Function" value="Email Deployment" class="radio-input" />
+                  <span> Email Deployment </span>
                 </div>
                 <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme4" />
-                  <span> Campaign Management </span>
+                  <input type="radio" name="Job Function" value="Partner" class="radio-input" />
+                  <span> Partner </span>
                 </div>
                 <div class="radio-menu-item">
-                  <input type="radio" name="Job Function" value="deneme5" />
-                  <span> Campaign Management </span>
+                  <input type="radio" name="Job Function" value="Employee" class="radio-input" />
+                  <span> Employee </span>
                 </div>
               </div>
             </div>

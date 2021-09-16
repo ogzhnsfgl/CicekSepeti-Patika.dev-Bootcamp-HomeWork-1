@@ -1,5 +1,6 @@
 /* Google Font Import */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 /* Local Imports */
 @import "mixin";
 @import "variables";
@@ -23,6 +24,27 @@ body {
 
   font-family: $primary-font;
   // overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  &-track {
+    background-color: rgba($color: $green-color, $alpha: 0.4);
+  }
+  &-thumb {
+    background-color: rgba($color: $blue-color, $alpha: 1);
+  }
+}
+h1 {
+  color: rgba($color: $blue-color, $alpha: 1);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 3px;
+  transition: all 0.5s;
+  text-shadow: 8px 1px 8px rgb(61, 58, 58);
+  &:hover {
+    font-size: 2.7rem;
+  }
 }
 
 h2 {
@@ -80,7 +102,7 @@ header {
     input {
       width: 100%;
       height: 3rem;
-      padding: 1rem;
+      padding: 1rem 1rem 1rem 2.5rem;
       border-radius: 8px;
       border: none;
       border-bottom: 1px solid $green-color;
@@ -98,11 +120,27 @@ header {
     i {
       position: absolute;
       top: 1.2rem;
-      right: 1rem;
+      left: 1rem;
       width: 25px;
       height: 15px;
       height: 100%;
       color: $blue-color;
+    }
+  }
+  &-profile {
+    img {
+      width: 55px;
+      border-radius: 100%;
+      transition: $general-transition;
+      border: 3px solid rgba($color: $green-color, $alpha: 0.6);
+      opacity: 0.8;
+    }
+
+    &:hover {
+      img {
+        border: 3px solid rgba($color: $green-color, $alpha: 1);
+        opacity: 1;
+      }
     }
   }
 }
@@ -235,14 +273,26 @@ header {
 
   .radio-menu {
     @include display-flex(flex, center, flex-start);
-
+    width: 100%;
     .radio-menu-items {
       margin-left: 1rem;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       & > * {
         flex-basis: 40%;
         padding: 0.3rem;
+      }
+
+      .radio-menu-item {
+        width: 100%;
+        text-align: left;
+        input {
+          accent-color: $green-color;
+        }
+        p {
+          width: 100%;
+        }
       }
     }
   }
@@ -267,8 +317,8 @@ header {
   max-width: 100%;
   display: grid;
   padding: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0.8rem;
   overflow: hidden;
 }
 
@@ -283,6 +333,7 @@ header {
   width: 50%;
   transition: $general-transition;
   transform: translate(-50%);
+  overflow: hidden;
 
   /* WHEN FORM IS ACTIVE */
   &-active {
@@ -296,18 +347,23 @@ header {
     height: 60%;
     transform: translate(-50%);
     margin-top: 50px;
-    border-radius: 12px;
+    border: 2px solid rgba($color: $green-color, $alpha: 0.7);
+    overflow: hidden;
 
     /* CLOSE BUTTON */
     .close {
       position: absolute;
-      top: 0px;
-      right: 10px;
+      top: -5px;
+      right: 14px;
       color: #aaa;
       float: right;
       font-size: 2.5rem;
       font-weight: bold;
-      color: red;
+      color: $black-color;
+      @include media(small) {
+        top: -12px;
+        right: 5px;
+      }
     }
 
     .close:hover,
@@ -320,14 +376,15 @@ header {
   /* MODAL CONTENT */
   &-content {
     background-color: rgba($color: darken($gray-color, 30%), $alpha: 0.9);
-    padding: 20px;
-    border: 2px solid rgba($color: $green-color, $alpha: 0.7);
-    border-radius: 1.2rem;
+    // padding: 20px;
+
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
+
+    overflow-y: auto;
 
     p {
       width: 100%;
@@ -341,6 +398,22 @@ header {
         line-height: 0.75rem;
         font-size: 0.75rem;
         padding: 0.5rem;
+      }
+      word-wrap: break-word;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      // padding: 0.3rem;
+      border-bottom: 3px solid rgb(189, 178, 178);
+      background: rgba($color: $green-color, $alpha: 0.7);
+      line-height: 2;
+      width: 100%;
+      font-weight: 600;
+      @include media(small) {
+        font-size: 1rem;
+        line-height: 2;
+        // padding: 0.5rem;
       }
     }
   }
