@@ -746,7 +746,7 @@ header {
 .formModal-content {
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
-  height: 100%;
+  height: 90%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -783,7 +783,9 @@ header {
   background: rgba(147, 36, 50, 0.7);
   line-height: 2;
   width: 100%;
+  height: 10%;
   font-weight: 600;
+  line-height: 3.5rem;
 }
 
 @media screen and (max-width: 570px) {
