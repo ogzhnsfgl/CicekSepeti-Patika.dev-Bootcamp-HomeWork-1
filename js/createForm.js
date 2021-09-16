@@ -35,9 +35,9 @@ appContainer.innerHTML = `  <header>
             <input type="text" name="Company" placeholder="Company" />
             <input type="text" name="First Name" placeholder="First Name" />
             <input type="text" name="Last Name" placeholder="Last Name" />
-            <input type="email" name="Email" placeholder="Email" />
+            <input type="email" name="Email" placeholder="Email"/>
             <input type="text" name="Title" placeholder="Title" />
-            <input type="text" name="Phone" placeholder="Phone" />
+            <input type="tel" name="Phone" placeholder="Phone" />
 
             <div class="radio-menu">
               <div class="radio-title">Job Functions:</div>
