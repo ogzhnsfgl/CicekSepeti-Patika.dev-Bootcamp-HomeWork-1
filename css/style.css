@@ -630,6 +630,12 @@ header {
   /* CLOSE BUTTON */
 }
 
+@media screen and (max-width: 978px) {
+  .formModal-active {
+    width: 85%;
+  }
+}
+
 .formModal-active .close {
   position: absolute;
   top: -5px;
@@ -672,8 +678,8 @@ header {
 
 .formModal-content p {
   width: 100%;
-  line-height: 1.2rem;
-  font-size: 1.2rem;
+  line-height: 1.1rem;
+  font-size: 1.1rem;
   text-align: left;
   color: #f3f3f3ab;
   padding: 1rem;

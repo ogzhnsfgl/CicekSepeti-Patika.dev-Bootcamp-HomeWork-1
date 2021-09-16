@@ -365,6 +365,10 @@ header {
     border: 2px solid rgba($color: $green-color, $alpha: 0.7);
     overflow: hidden;
 
+    @include media(large) {
+      width: 85%;
+    }
+
     /* CLOSE BUTTON */
     .close {
       position: absolute;
@@ -403,8 +407,8 @@ header {
 
     p {
       width: 100%;
-      line-height: 1.2rem;
-      font-size: 1.2rem;
+      line-height: 1.1rem;
+      font-size: 1.1rem;
       text-align: left;
       color: $black-color;
       padding: 1rem;
