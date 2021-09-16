@@ -1,5 +1,5 @@
 @import "variables";
-
+@import "mixin";
 /* CARD ITEM */
 .card {
   width: 100%;
@@ -89,16 +89,23 @@
 }
 
 .typing-header {
-  width: 56ch;
+  width: 100%;
   animation: typing 3s steps(56), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: $blue-color;
   letter-spacing: 1px;
+  @include media(large) {
+    width: 100%;
+    animation: none;
+    white-space: normal;
+    word-wrap: break-word;
+    border-right: none;
+  }
 }
 
 @keyframes typing {
