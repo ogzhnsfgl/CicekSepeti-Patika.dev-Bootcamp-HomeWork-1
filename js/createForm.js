@@ -69,6 +69,7 @@ appContainer.innerHTML = `  <header>
               type="text"
               name="Your message:"
               placeholder="Your message...."
+              resize="none"
             ></textarea>
             <button class="form-button" type="submit">Send</button>
           </form>
