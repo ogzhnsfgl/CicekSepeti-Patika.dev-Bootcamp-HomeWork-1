@@ -1,6 +1,6 @@
 const appContainer = document.querySelector(".app");
-
 appContainer.innerHTML = `  <header>
+
       <div class="container">
         <div class="nav">
           <div class="nav-logo">
@@ -13,10 +13,10 @@ appContainer.innerHTML = `  <header>
             ></i>
           </div>
 
-          <div class="nav-profile">
+       <div class="nav-profile">
             <a href="https://github.com/Ogzhnsfgl" target="_blank">
-              <i class="fas fa-user fa-2x"></i
-            ></a>
+             <img src="https://avatars.githubusercontent.com/u/85337758?v=4" alt="" /></a>
+          </div>
           </div>
         </div>
       </div>
