@@ -128,7 +128,7 @@
 }
 
 .typing-header {
-  width: 750px;
+  width: 850px;
   -webkit-animation: typing 4s steps(56), blink 0.5s step-end infinite alternate;
           animation: typing 4s steps(56), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
@@ -141,7 +141,7 @@
   letter-spacing: 1px;
 }
 
-@media screen and (max-width: 978px) {
+@media screen and (max-width: 1100px) {
   .typing-header {
     width: 100%;
     -webkit-animation: none;
