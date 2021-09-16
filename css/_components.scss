@@ -89,8 +89,8 @@
 }
 
 .typing-header {
-  width: 100%;
-  animation: typing 3s steps(56), blink 0.5s step-end infinite alternate;
+  width: 750px;
+  animation: typing 4s steps(56), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
