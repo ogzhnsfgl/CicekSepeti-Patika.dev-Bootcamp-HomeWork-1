@@ -46,6 +46,15 @@ h1 {
     font-size: 2.7rem;
   }
 }
+h2 {
+  color: $blue-color;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  @include media(small) {
+    font-size: 1.1rem;
+  }
+}
 
 .container {
   max-width: 120rem;

@@ -238,6 +238,19 @@ h1:hover {
   font-size: 2.7rem;
 }
 
+h2 {
+  color: #a52c3c;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 570px) {
+  h2 {
+    font-size: 1.1rem;
+  }
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
