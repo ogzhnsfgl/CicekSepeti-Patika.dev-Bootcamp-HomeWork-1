@@ -8,4 +8,4 @@
 - JSONPlaceHolder was used to fetch some mock data.
 - Responsive UI added.
 
-Thanks for contribution to [@ebubekirrzg](https://github.com/ebubekirrzgr/)!
+Thanks for contribution to [@ebubekirrzgr](https://github.com/ebubekirrzgr/)!
